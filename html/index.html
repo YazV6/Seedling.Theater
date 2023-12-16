@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lan="en">
+   <head>
+      <link rel="stylesheet" href="mystyle.css">
+      <link rel="stylesheet" href="classes.html">
+       <meta chareset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+       <link rel="stylesheet" href="../css/mystyle.css">
+       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+       
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+      <title>Accordion Test</title>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+     <script type="text/javascript">
+         $(document).ready( function() {
+          
+             
+             // initialize accordion
+             $('#Accordion ul').each( function() {
+                 var currentURI = window.location.href;
+                 var links = $('a', this);
+                 var collapse = true;
+                 for (var i = 0; i < links.size(); i++) {
+                      var elem = links.eq(i);     
+                      var href = elm.attr('href');
+                     var hreflength = href.length;
+                     var compareTo = currentURI.substr (-1*hrefLength);
+                     
+                     if (href == compareTo) {
+                         collapse = false;
+                         break;
+                     }
+                 };
+                 if (collapse) {
+                     $(this).hide();
+                 }
+             });
+             
+             $("#Accordion".delegate('span', 'click', function() {
+                 var ul = $(this).next('ul');
+                 if (ul.is(':visible')) {
+                     ul.slideUp(500);
+                 } else {
+                     $('#Accordion ul').not(ul).slideUp(500);
+                     ul.slideDown(500);
+                 }
+             });
+       </script>
+       
+    </head>
+     
+    <body>
+       <div class="jumbotron text-center" style="margin-bottom: 0">
+       <h1>Seedling Theater Company</h1>
+       <p>Where young performers are grown</p>
+       </div>
+       
+       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+             
+              <button class="navar-toggler" type="button" data-toggler="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="collapseibleNavbar">
+               <ul class="nav justify-content-center">
+                
+               <li class="nav-item">   
+                 <a class="nav-link" href="#">Home</a>
+                 </li>  
+                  <li class="nav-item"> 
+               <a class="nav-link" href="#">About Us</a>
+                 </li>
+                 <li class="nav-item"> 
+               <a class="nav-link" href="#">Register</a>
+            </li>
+             <li class="nav-item"> 
+               <a class="nav-link" href="#">Store</a>
+            </li>
+          </ul>     
+        </div> 
+       </nav>
+       
+       <!--Seedling Landing Shopping Page-->
+       
+       <div class="container-fluid">
+           <div class="row">
+               <section>
+                   <div class="row">
+                   <div class="col-lg-8">
+                     <div class="card wish-list-mb-3">
+                         <div class="card-body">
+                          
+                           <h5 class="mb-4">CART <span></span></h5> 
+                            
+                             <div class="row mb-4">
+                                <div class="col-md-5 col-lg-3 col-xl-3">
+                                    <div class="view zoom overlay z-depth-1rounded mb-3 mb-md-0">
+                                        <img class="img-fluid w-100" src="C:/Users/yazva/Documents/College - CSN/GRC 275B - Web Design II/Seeding Theater Images/Screenshot 2023-11-19 163205.jpg" alt="sample">
+                                        
+                                         <a href="#!">
+                                           <div class="mask waves-effect waves-light">
+                                               <img class="#">
+                                            <div class="mask rgba-black-slight waves-effect waves-light">
+                                                
+                                        
+                                    </div> 
+                                </div>
+                             </div> 
+                         </div>
+                     </div>        
+                 </div>
+           </div>
+         </section>
+       </div>
+        </div>
+       
+       <div class="col-md-7 col-lg 9 col-xl-9">
+           <div class="d-flex justify-content-between"> 
+               <h5>Black Cotton Shirt</h5>
+               <p class="mb-3 text-muted text-uppercase small">"Powered by Theater" Black Shirt</p>
+               <p class="mb-3 text-muted text-uppercase small">Color: Black</p>
+               <p class="mb-3 text-muted text-uppercase small">Size: Medium</p>
+               
+               </div>
+               <div class="def-number-input number-input safari_only mb-0 w-100">
+                   <button onclick="this.parentNode.querySelector ('input[type=number]').stepDown()"
+                   class="minus"></button>
+                   <input class="quantity" min="0" name="quantity" value="1" type="number">
+                   <button onclick="this.parentNode.querySelector ('input[type=number]').stepUp()"
+                   class="plus"></button>
+               </div>
+               
+               <div class="d-flex justify-content-between align-items-center">
+               <div>
+               <a href="#" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                   class="fa fa-trash-o mr-1"></i> REMOVE ITEM </a>
+             <a href="#" type="button" class="card-link-secondary small text-uppercase"><i
+                    class="fa fa-heart-o mr-1"></i> MOVE TO WISH LIST</a>
+                </div>
+                   <p class="mb-0"><span><strong>$15.99</strong></span></p>
+                 </div>
+                 </div>
+                        
+           <div class="row mb-4">
+           <div class="col-md-5 col-lg-3 col-xl-3">   
+            <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+                <img class="img-fluid w-30"
+                src="C:/Users/yazva/Documents/College - CSN/GRC 275B - Web Design II/CODING/images/Screenshot 2023-12-03 213321.jpg" alt="sample">
+                <a href="#!">
+                    <div class="mask waves-effect waves-light">
+                   <img class="img-fluid w-30"
+                src="C:/Users/yazva/Documents/College - CSN/GRC 275B - Web Design II/CODING/images/Screenshot 2023-12-03 213438.jpg" alt="sample">     
+                        <div class="mask rgba-black-slight waves-effect waves-light"></div> 
+                    </div>
+                </a>
+            </div>
+                 
+          <div class="col-md-7 col-lg 9 col-xl-9">
+           <div class="d-flex justify-content-between"> 
+               <h5>Black Cotton Shirt</h5>
+               <p class="mb-3 text-muted text-uppercase small">"Theater is My Sport"</p>
+               <p class="mb-3 text-muted text-uppercase small">Color: Black</p>
+               <p class="mb-3 text-muted text-uppercase small">Size: Large</p> 
+                   </div>
+               <div class="def-number-input number-input safari_only mb-0 w-100">
+                   <button onclick="this.parentNode.querySelector ('input[type=number]').stepDown()"
+                   class="minus"></button>
+                   <input class="quantity" min="0" name="quantity" value="1" type="number">
+                   <button onclick="this.parentNode.querySelector ('input[type=number]').stepUp()"
+                   class="plus"></button>
+               </div>            
+                     <div class="d-flex justify-content-between align-items-center">
+               <div>
+               <a href="#" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                   class="fa fa-trash-o mr-1"></i> REMOVE ITEM </a>
+             <a href="#" type="button" class="card-link-secondary small text-uppercase"><i
+                    class="fa fa-heart-o mr-1"></i> MOVE TO WISH LIST</a>
+                </div>
+                   <p class="mb-0"><span><strong>$10.99</strong></span></p>
+                 </div>
+                 </div>
+                 <p class="text-primary mb-0"><i class="fa fa info-o mr-1"></i>DO NOT DELAY THE PURCHASE, ADDING ITEMS TO YOUR CART DOES NOT MEAN BOOKING THEM.</p>
+           
+           <!--card-->
+           
+           <div class="card mb-3">
+            <div class="card-body">
+            <h5 class="mb-4">Expected shipping delivery</h5>
+            <p class="mb-0"> Friday 10/11/23 - Sunday 10/13/23</p>
+            </div>   
+           </div>
+           
+            <!--card-->
+            
+            <div class="card mb-3">
+                <div class="card-body">
+                    
+                    <h5 class="mb-4">WE ACCEPT</h5>
+                    
+                    <img class="mr-2" width="45px"
+                    src="C:/Users/yazva/Documents/College - CSN/GRC 275B - Web Design II/CODING/images/visa.jpg"
+                    alt="visa">
+                    
+                    <img class="mr-2" width="45px"
+                    src="C:/Users/yazva/Documents/College - CSN/GRC 275B - Web Design II/CODING/images/Mastercard-Logo-1.jpg"
+                    alt="mastercard">
+                    
+                    <img class="mr-2" width="45px"
+                    src="C:/Users/yazva/Documents/College - CSN/GRC 275B - Web Design II/CODING/images/amex.jpg"
+                    alt="Amex">
+                    
+                </div>
+            </div>
+           
+             <!--Div columb-->
+             <div class="col-lg-4"></div>
+             
+               <!--card-->
+               
+               <div class="card mb-3">
+                   <div class="card-body">
+                       <h5 class="mb-3">The total amount of</h5>
+                       
+                       <ul class="list-group list-group-flush">
+                           <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0"> 
+                           Temporary Amount
+                           <span>$25.99</span>
+                           </li>
+                           
+                           <ul class="list-group list-group-flush">
+                           <li class="list-group-item d-flex justify-content-between align-items-center px-0"> 
+                           Shipping
+                           <span>Gratis</span>
+                           </li>
+                           
+                           <ul class="list-group list-group-flush">
+                           <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3"> 
+                            <strong>The total amount of</strong>
+                            <strong>
+                                <p class="mb-0">(including VAT)</p>
+                            </strong>
+                               </div>
+                               <span><strong>$30.98</strong></span>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+               
+               <button type="button" class="btn btn-primary btn-block waves-effect waves-light">GO TO CHECKOUT</button>
+               
+               <div class="card mb-3">
+                   <div class="card-body">
+                       <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample1"
+                       aria-expanded="false" aria-controls="CollapseExample1">
+                           Add a discount code (optional)
+                           <span><i class="fa fa-chevron-down pt-1"></i></span>
+                       </a>
+                       
+                       <div class="collapse" id="collapseExample1">
+                           <div class="mt-3">
+                               <div class="md-form md-outline mb-0">
+                                   <input type="text" id="discount-code1" class="form-control font-weight-light" placeholder="Enter Discount Code">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+       <!--Utility Navigation-->
+        
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar">
+             <ul class="navbar-nav-ml-auto">
+                 
+                 <li class="nav-item">
+                   <a href="#!" class ="nav-link waves-effect">
+                      SHOP 
+                   </a>   
+                 </li>
+                 <li class="nav-item pl-2 mb-2-md-0">
+                     <button><a href="#" type="button"
+                         class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">SIGN UP
+                     </a></button>
+                 </li>
+             </ul>
+          </nav>  
+        </div>
+        
+        
+        <!--modal sign inn--> 
+        
+        <div class="modal fade" id="modelRegisterForm" labindex="-1" aria-labelledby="myModallabel" aria-hidden="true"></div>
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div header="modal-header">
+                     <h5 class="modal-title mx-auto">SIGN UP</h5>
+                     <button type="button" class="close ml-0" data-dismiss="modal" aria-label="closed">
+                         <span aria-hidden="true">&times;</span>
+                      <div class="modal-body">
+                          <div class="md-form md-outline"></div>
+                          <i class="fa fa-"
+                      </div>
+                         
+                     </button>  
+                 </div>
+             </div>
+         </div>
+        
+        
+        
+         
+           <div class="container-fluid my-3 border bg-white text-black">
+           <center><img src="C:/Users/yazva/Documents/College - CSN/GRC 275B - Web Design II/CODING/images/logo seedling.jpg" width="80"></center>
+          
+           <nav class="navbar justify-content-center">
+                 <ul class="navbar justify-content-center">
+                   <li class="nav-item">
+                      <a class="nav-link active" href="#">Calendar</a>
+            </li>
+                   <li class="nav-item">
+                      <a class="nav-link active" href="#">Classes</a>
+             </li>  
+             </ul> 
+           </nav>
+           
+           
+          <center><img src="C:/Users/yazva/Documents/College - CSN/GRC 275B - Web Design II/CODING/images/9.jpg" class="img-fluid" width="1200"></center>
+          <center><img src="C:/Users/yazva/Documents/College - CSN/GRC 275B - Web Design II/CODING/images/8.jpg" class="img-fluid" width="1200"></center>
+
+         </div>
+         
+        <div class="container py-5"></div> 
+        
+         <!-- Outline of Seedling Calendar-->
+         <header class="text-center text-grey mb-5">
+           <h3><b>EVENTS FOR THIS MONTH</b></h3>
+         </header>
+         
+         <!-- Calendar -->
+         <div class="calendar shadow bg-white p-5">
+           <div class="d-flex align-items-center"><i class="fa fa-calendar fa-3x mr-3"></i>
+               <div class="dropdown"><h1 class="month frot-weight-bold mb-0 text-uppercase"><span>June 2023 button   </span></h1><div class="dropdown-content">January <br> February <br> March <br> April <br> May <br> June <br> July <br> August <br> September <br> October <br> November <br> December <br></div></div>
+               </div> 
+               
+               
+               <!-- Initialize accordion -->
+               <ul id="Accordion" class="accordion">
+                   <li>
+                       
+                       <span><div Class="link"><i class="fa fa-bullhorn"></i>Seeding Theater<i class="fa fa-chevron-down"></i></div></span>
+                       <ul class="submenu">
+                        <li><a href="#">Musical</a></li>   
+                        <li><a href="#">Classes</a></li>     
+                         <li><a href="#">Resources</a></li>     
+                       </ul>
+                   </li>
+               </ul>
+               
+                <span><div Class="link"><i class="fa fa-asterisk"></i>Intro Classes<i class="fa fa-chevron-down"></i></div></span>
+                       <ul class="submenu">
+                        <li><a href="#">Casting</a></li>   
+                        <li><a href="#">Summer Camp</a></li>     
+                         <li><a href="#">Sprouts</a></li>     
+                       </ul>
+                       
+                       <span><div class="link"><i class="fa fa-bars"></i>Advanced Classess<i class="fa fa-chevron-down"></i></div></span>
+                       <ul class="submenu">
+                           <li><a href="">Design</a></li>
+                       </ul>
+                       <li>
+                           <span>Dancing Classes</span>
+                        <ul>
+                            <li><a href="#">Dance I</a></li>
+                            <li><a href="#">Dance II</a></li>
+                        </ul>   
+                       </li>
+               
+                
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-targer="#bs-example-navbar-collapse-1" aria-expanded="false">
+                 <span class="sr-only">Toggle Navigation</span>   
+                 <span class="text">Filters</span>   
+                </button>
+             </div>   
+             
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="#"><span class="text-white" target="_blank">Instructors</span></a></li>  
+                <li class="active"><a href="#">Frozen Cast <span class="sr-only">(current></span></a></li> 
+                 <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Classes <span class="caret"></span></a>  
+                  <ul class="dropdown-menu">
+                      <li><a href="#">Musical</a></li>
+                      <li><a href="#">Acting</a></li>                     
+                      <li><a href="#">Voice Performance</a></li> 
+                      <li><a href="#" target="_blank">Sprouts</a></li> 
+                      <li role="seperator" class="divider"></li>      
+                      <li><a href="#">Dance I</a></li>   
+                        <li role="seperator" class="divider"></li>    
+                      <li><a href="#">Dance II</a></li>  
+                  </ul>   
+                 </li> 
+                 <li><a href="#">Resources</a></li>
+              </ul>   
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Age Groups</a></li>
+                </ul> 
+             </div>
+            
+            
+           <p class="font-italic text-muted mb-5">No events scheduled</p>
+           <ol class="day-names list-unstyled">
+            <li class="font-weight-bold text-uppercase">Sunday</li>    
+             <li class="font-weight-bold text-uppercase">Monday</li>   
+              <li class="font-weight-bold text-uppercase"><b>Tuesday</b></li> 
+               <li class="font-weight-bold text-uppercase">Wednesday</li>   
+               <li class="font-weight-bold text-uppercase">Thursday</li>
+               <li class="font-weight-bold text-uppercase">Friday</li>      
+               <li class="font-weight-bold text-uppercase">Saturday</li>   
+           </ol>
+           
+           <ol class="days list-unstyled">
+              <li>
+                  <div class="date">1</div>
+                  <div class="event bg-success">Recital: 8-12 years</div>
+              </li> 
+               <li>
+                   <div class="date">2</div> 
+               </li>
+                <li>
+                   <div class="date">3</div> 
+               </li>
+                <li>
+                   <div class="date">4</div> 
+               </li>
+                <li>
+                   <div class="date">5</div> 
+               </li>
+                <li>
+                   <div class="date">6</div> 
+               </li>
+                <li>
+                   <div class="date">7</div> 
+               </li>
+           </ol>
+         </div>
+         
+         
+         <div class="text-center">
+             <button class="btn1 btn-default btn circle btn-1g">ACTING<i class="glyphicon glyphicon-plus" aria-hidden="true"></i></button>
+             <button class="btn1 btn-default btn circle btn-1g">VOCAL PERFORMANCE<i class="glyphicon glyphicon-music" aria-hidden="true"></i></button>
+             <button class="btn1 btn-default btn circle btn-1g">MUSICAL THEATER<i class="glyphicon glyphicon-chevron-up" aria-hidden="true"></i></button>
+             <button class="btn1 btn-default btn circle btn-1g">SUMMER CAMPS<i class="glyphicon glyphicon-chevron-down" aria-hidden="true"></i></button>
+         </div>
+         
+         
+         <div class="col-sm-12">
+             <div class="footer fixed bottom">
+             <h3>Copyright. Seedling Theater Company 2020</h3>
+             </div>
+         </div>
